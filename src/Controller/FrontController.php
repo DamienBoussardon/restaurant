@@ -23,11 +23,33 @@ class FrontController extends AbstractController {
     /**
      * @Route("/equipe", name="front_team", methods={"GET"})
      */
-    public function showUsers(){
+    public function showAllUsers(){
        
-       // $currentSurvey = $this->surveyRepository->find($id);
+        // $currentSurvey = $this->surveyRepository->find($id);
 
         //return $this->render('survey/index.html.twig', []);
 
     }
+
+    /**
+     * @Route("/carte", name="front_dishes", methods={"GET"})
+     */
+    public function showAllDishes(){
+        /* Lister les catégories récupérée dans la table Category,
+         ainsi que le nombre de plats disponibles dans chacune.
+         */
+ 
+     }
+
+    /**
+    * @Route("/carte/{id}", name="front_dishes_category", methods={"GET"})
+    */
+    public function showAllDishesByCategory(){
+        /*  Vérifier l'existence de la category
+            Renvoyer une Exception si la catégorie n'existe pas
+            Afficher le nom de la categorie, liste ces plats (nom, prix, calories)
+            Permettre le retour vers la liste des catégories
+         */
+ 
+     }
 }
